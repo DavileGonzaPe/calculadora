@@ -37,4 +37,16 @@ public class Operacion {
     public void setResultado(double resultado) {
         this.resultado = resultado;
     }
+
+    public String operacionToString(String operacion){
+        switch (operacion) {
+            case "suma":
+                return "El resultado de SUMAR " + this.operando1 + " + " + this.operando2 + " es " + this.resultado; 
+            case "resta":
+                return "El resultado de RESTAR " + this.operando1 + " - " + this.operando2 + " es " + this.resultado;
+        
+            default:
+                return "No se ha especificado operación";
+        }
+    }
 }
